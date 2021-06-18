@@ -6,13 +6,13 @@
 <form action='@Url.Action("Cadastrar")' method="POST">
 
     <label for="IdJogador">ID</label>
-    <input type="text" name="IdJogador">
+    <input type="text" name="IdJogador" required>
 
     <label for="Nome">Nome</label>
-    <input type="text" name="Nome">
+    <input type="text" name="Nome" required>
 
     <label for="IdEquipe">IdEquipe</label>
-    <input type="text" name="IdEquipe">
+    <input type="text" name="IdEquipe" required>
 
     <button type="submit">Cadastrar</button>
 
@@ -33,6 +33,7 @@
                 <td>@jogador.IdJogador</td>
                 <td>@jogador.Nome</td>
                 <td>@jogador.IdEquipe</td>
+                <td> <a asp-area = "" asp-controller = "Jogador" asp-action = "Excluir" asp-route-id = "@jogador.IdJogador"></a></td>
             </tr>
         }
     </tbody>

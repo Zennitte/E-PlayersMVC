@@ -31,5 +31,13 @@ namespace E_PlayersMVC.Controllers
 
             return LocalRedirect("~/Jogador/Listar");
         }
+
+        [Route("Excluir/{id}")]
+        public IActionResult Excluir(int id)
+        {
+            jogadorModel.Deletar(id);
+            ViewBag.Jogadores = jogadorModel.LerTodas();
+            return LocalRedirect("~/Jogador/Listar");
+        }
     }
 }

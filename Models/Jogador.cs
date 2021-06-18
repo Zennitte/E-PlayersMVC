@@ -56,6 +56,8 @@ namespace E_PlayersMVC.Models
                 jogador.IdJogador = Int32.Parse(linha[0]);
                 jogador.Nome = linha[1];
                 jogador.IdEquipe = Int32.Parse(linha[2]);
+
+                jogadores.Add(jogador);
             }
             return jogadores;
         }
