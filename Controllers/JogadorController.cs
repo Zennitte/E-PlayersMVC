@@ -24,6 +24,8 @@ namespace E_PlayersMVC.Controllers
             novoJogador.IdJogador = Int32.Parse(form["IdJogador"]);
             novoJogador.Nome = form["Nome"];
             novoJogador.IdEquipe = Int32.Parse(form["IdEquipe"]);
+            novoJogador.Email = form["Email"];
+            novoJogador.Senha = form["Senha"];
 
             jogadorModel.Criar(novoJogador);
 

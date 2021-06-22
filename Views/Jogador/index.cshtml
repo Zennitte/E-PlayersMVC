@@ -3,18 +3,38 @@
     ViewData["Title"] = "Jogadores";
 }
 
-<form action='@Url.Action("Cadastrar")' method="POST">
+<div class="titulo_pagina">
+    <h1>Cadastro de @ViewData["Title"]</h1>
+</div>
 
-    <label for="IdJogador">ID</label>
-    <input type="text" name="IdJogador" required>
+<form class = "cadastro" action='@Url.Action("Cadastrar")' method="POST">
 
-    <label for="Nome">Nome</label>
-    <input type="text" name="Nome" required>
+    <div class="campo">
+        <label for="IdJogador">ID</label>
+        <input type="text" name="IdJogador" required>
+    </div>
 
-    <label for="IdEquipe">IdEquipe</label>
-    <input type="text" name="IdEquipe" required>
+    <div class="campo">
+        <label for="Nome">Nome</label>
+        <input type="text" name="Nome" required>
+    </div>
 
-    <button type="submit">Cadastrar</button>
+    <div class="campo">
+        <label for="IdEquipe">IdEquipe</label>
+        <input type="text" name="IdEquipe" required>
+    </div>
+
+    <div class="campo">
+        <label for="Email">Email</label>
+        <input type="email" name="Email" required>
+    </div>
+
+    <div class="campo">
+        <label for="Senha">Senha</label>
+        <input type= "password" name="Senha" required>
+    </div>
+
+    <button class="gradient btn" type="submit">Cadastrar</button>
 
 </form>
 
@@ -23,7 +43,7 @@
     <thead>
         <th>ID</th>
         <th>Nome</th>
-        <th>IdEquipe</th>
+        <th>Email</th>
     </thead>
 
     <tbody>
@@ -32,8 +52,8 @@
             <tr>
                 <td>@jogador.IdJogador</td>
                 <td>@jogador.Nome</td>
-                <td>@jogador.IdEquipe</td>
-                <td> <a asp-area = "" asp-controller = "Jogador" asp-action = "Excluir" asp-route-id = "@jogador.IdJogador"></a></td>
+                <td>@jogador.Email</td>
+                <td> <a asp-area = "" asp-controller = "Jogador" asp-action = "Excluir" asp-route-id = "@jogador.IdJogador">Excluir</a></td>
             </tr>
         }
     </tbody>
