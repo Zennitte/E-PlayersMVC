@@ -31,7 +31,7 @@ namespace E_PlayersMVC.Controllers
 
             Mensagem = "Dados incorretos, tente novamente...";
 
-            return LocalRedirect("~/");
+            return LocalRedirect("~/Login");
             
         }
 
