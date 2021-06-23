@@ -21,7 +21,13 @@
 
     <div class="campo">
         <label for="IdEquipe">IdEquipe</label>
-        <input type="text" name="IdEquipe" required>
+        @* <input type="text" name="IdEquipe" required> *@
+        <select name="IdEquipe" id="IdEquipe">
+            @foreach (Equipe equipes in ViewBag.Equipes)
+            {
+                <option value="@equipes.IdEquipe">@equipes.Nome</option>
+            }
+        </select>
     </div>
 
     <div class="campo">
