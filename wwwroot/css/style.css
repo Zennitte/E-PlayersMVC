@@ -42,6 +42,12 @@ ul{
     color: #d5379b
 }
 
+.link_cadastro{
+    text-decoration: none;
+    color: #fc1e8b;
+    padding-top: 20px;
+}
+
 .cabecalho{
     display: flex;
     justify-content: space-around;

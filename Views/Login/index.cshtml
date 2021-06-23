@@ -17,6 +17,9 @@
         <label for="Senha">Senha</label>
         <input type= "password" name="Senha" required>
     </div>
+    <div class="campo">
+        <a class="link_cadastro" asp-area = "" asp-controller = "Jogador" asp-action = "Index">Não tem conta? Cadastre-se</a>
+    </div>
 
     <div class="erro">@TempData.Peek("Mensagem")</div>
 
